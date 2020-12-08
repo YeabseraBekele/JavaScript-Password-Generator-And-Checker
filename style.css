@@ -1,0 +1,170 @@
+/*styles for generating passwords */
+* {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.container {
+    background-color: #aaa;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*overflow: hidden;*/
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.5em;
+}
+
+img#logo {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.strength-info {
+    display: flex;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    padding: 5px;
+    background-color: rgb(159, 214, 159);
+    border-radius: 0.2em;
+}
+
+.header a:hover {
+    opacity: 0.8;
+}
+
+.quote {
+    text-align: center;
+}
+
+.password-generated-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#remember-field {
+    background-color: rgb(159, 214, 159);
+    margin: 3px;
+    font-weight: 700;
+    font-style: oblique;
+    padding: 3px 10px 3px;
+    border: 1px solid black;
+    border-radius: .5em;
+}
+
+#title {
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    width: 500px;
+    text-align: center;
+    border-radius: 0.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+button {
+    border-radius: .3em;
+}
+
+button#copy-text {
+    background-color: rgb(29, 223, 29);
+    padding: 5px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 0.8em;
+}
+
+.setting-area {
+    padding: 5px;
+    width: 500px;
+}
+
+button {
+    background-color: rgb(159, 214, 159);
+    border: 1px solid green;
+}
+
+button#generate {
+    padding: 10px;
+}
+
+button#strength {
+    padding: 3px;
+}
+
+#new-password {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: .3em;
+    font-size: medium;
+}
+
+.week {
+    color: rgb(226, 47, 47);
+}
+
+#strength-bar {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.Weak {
+    width: 100px;
+    background-color: red;
+}
+
+.Medium {
+    width: 200px;
+    background-color: yellow;
+}
+
+.Strong {
+    width: 300px;
+    background-color: green;
+}
+
+.Very-Weak{
+    width: 25px;
+    background-color: rgb(206, 89, 89);
+}
+.Very-Strong{
+    width: 400px;
+    background-color: rgb(9, 19, 158);
+}
+.password-summary-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+#strength-lbl-2{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold
+}
+.letter-case-count{
+    display: flex;
+    justify-content:space-between;
+}

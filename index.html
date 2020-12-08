@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Password Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" defer src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img id="logo" src="logo.png" alt="logo" />
+        <h1>Password Generator And Checker</h1>
+        <a href="#" onClick="alert('see the source code :)')">How It Works</a>
+      </div>
+      <div class="quote">
+        Password strength is a measure of the effectiveness of a password
+        against guessing or brute-force attacks. In its usual form, it estimates
+        how many trials an attacker who does not have direct access to the
+        password would need, on average, to guess it correctly. "Wikipedia"
+      </div>
+
+      <div class="password-generated-area">
+        <div class="pass-area">
+          <input id="title" placeholder="generated password" />
+          <button id="copy-text">Copy Password</button>
+        </div>
+        <div class="strength-info">
+          <div id="strength-bar" class="Very-Weak"></div>
+          <p id="strength-lbl">Empty Password</p>
+        </div>
+      </div>
+
+      <p id="remember-field">password's mnemonic will appear here !</p>
+      <div class="setting-area">
+        <form id="passwordGeneratorForm" class="form">
+          <label for="numberOfChars">Password Length (4-32 characters)</label>
+          <div class="input-field">
+            <input
+              type="range"
+              min="4"
+              max="32"
+              value="12"
+              id="numberOfChars"
+              />
+            <label for="numberOfChars" id="numberOfCharsLabel">x</label>
+          </div>
+          <label for="uppercase">Include Uppercase ( e.g. ABCDEFGH )</label>
+          <input type="checkbox" id="uppercase" />
+
+          <label for="lowercase">Include Lowercase ( e.g. abcdefgh )</label>
+          <input type="checkbox" id="lowercase" />
+
+          <label for="number">Include Numbers ( e.g. 123456 )</label>
+          <input type="checkbox" id="number" />
+
+          <label for="symbol">Include Symbols ( e.g. @#$% )</label>
+          <input type="checkbox" id="symbol" />
+
+          <label for="ambChars">Include Ambiguous Characters (eg. {[(/'",;:.)</label>
+          <input type="checkbox" id="ambChars" />
+
+          <button type="submit" id="generate">Generate Password</button>
+        </form>
+      </div>
+
+      <div class="password-summary-area">
+        <h3 style="text-align: center">Check your password Here</h3>
+        <div>
+          <input id="new-password" placeholder="password" />
+          <button id="strength">Check Strength</button>
+        </div>
+        <div class="labels">
+          <p id="password-length-count">x Total Characters</p>
+          <div class="letter-case-count">
+            <p id="uppercase-count">x Uppercase Letters</p>
+            <p id="lowercase-count">x Lowercase Letters</p>
+          </div>
+          <p id="number-count">x Numbers</p>
+          <p id="symbol-count">x Symbols</p>
+          <p id="ambiguous-chars-count">x Ambiguous Characters</p>
+          <p id="strength-lbl-2">Password Strength</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
